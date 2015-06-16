@@ -1,12 +1,16 @@
 Package: bcrypt
 Type: Package
-Title: OpenBSD Blowfish Password Hashing Algorithm
+Title: 'Blowfish' Password Hashing Algorithm
 Version: 0.1
-Authors@R: person("Jeroen", "Ooms", , "jeroen.ooms@stat.ucla.edu", role = c("cre", "aut"))
-Description: An R interface to the OpenBSD blowfish password hashing algorithm,
-    as described in "A Future-Adaptable Password Scheme" by Niels Provos. The
+Authors@R: c(
+    person("Jeroen", "Ooms", , "jeroen.ooms@stat.ucla.edu", role = c("cre", "aut")),
+    person("Damien", "Miller", role = "cph"),
+    person("Niels", "Provos", role = "cph"),
+    person("David", "Mazieres", role = "cph")
+    )
+Description: An R interface to the 'OpenBSD Blowfish' password hashing algorithm,
+    as described in "A Future-Adaptable Password Scheme" by 'Niels Provos'. The
     implementation is derived from the 'py-bcrypt' module for Python which is a
-    wrapper for the OpenBSD implementation.
+    wrapper for the 'OpenBSD' implementation.
 License: BSD_2_clause + file LICENSE
 Imports: openssl
-Suggests: testthat

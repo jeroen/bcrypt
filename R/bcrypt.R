@@ -38,16 +38,14 @@
 #' checkpw(passwd, hash)
 #'
 #' # Use varying complexity:
+#' hash11 <- hashpw(passwd, gensalt(11))
 #' hash12 <- hashpw(passwd, gensalt(12))
 #' hash13 <- hashpw(passwd, gensalt(13))
-#' hash14 <- hashpw(passwd, gensalt(14))
-#' hash15 <- hashpw(passwd, gensalt(15))
 #'
 #' # Takes longer to verify (or crack)
+#' system.time(checkpw(passwd, hash11))
 #' system.time(checkpw(passwd, hash12))
 #' system.time(checkpw(passwd, hash13))
-#' system.time(checkpw(passwd, hash14))
-#' system.time(checkpw(passwd, hash15))
 gensalt <- function(log_rounds = 12){
   stopifnot(is.numeric(log_rounds))
   csalt <- openssl::rand_bytes(16)
