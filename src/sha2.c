@@ -34,7 +34,7 @@
  * $From: sha2.c,v 1.1 2001/11/08 00:01:51 adg Exp adg $
  */
 
-#define _BSD_SOURCE
+#define _DEFAULT_SOURCE
 #include <sys/types.h>
 
 /* PYBC_SHA512Final needs to know the host endian, so try to figure it out */
