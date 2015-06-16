@@ -40,8 +40,7 @@ wrapper that does exactly this.
 \code{gensalt} generates a random text salt for use with \code{hashpw}.
 The first few characters in the salt string hold the bcrypt version number
 and value for \code{log_rounds}. The remainder stores 16 bytes of base64
-encoded randomness for seeding the hashing algorithm. The complexity
-of the hashing is configurable via the \code{log_rounds} parameter.
+encoded randomness for seeding the hashing algorithm.
 }
 \examples{
 # Secret message as a string
