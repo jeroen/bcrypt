@@ -9,3 +9,4 @@ Description: An R interface to the OpenBSD blowfish password hashing algorithm,
     wrapper for the OpenBSD implementation.
 License: BSD_2_clause + file LICENSE
 Imports: openssl
+Suggests: testthat

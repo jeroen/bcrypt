@@ -43,4 +43,30 @@ and value for \code{log_rounds}. The remainder stores 16 bytes of base64
 encoded randomness for seeding the hashing algorithm. The complexity
 of the hashing is configurable via the \code{log_rounds} parameter.
 }
+\examples{
+# Secret message as a string
+passwd <- "supersecret"
+
+# Create the hash
+hash <- hashpw(passwd)
+hash
+
+# To validate the hash
+identical(hash, hashpw(passwd, hash))
+
+# Or use the wrapper
+checkpw(passwd, hash)
+
+# Use varying complexity:
+hash12 <- hashpw(passwd, gensalt(12))
+hash13 <- hashpw(passwd, gensalt(13))
+hash14 <- hashpw(passwd, gensalt(14))
+hash15 <- hashpw(passwd, gensalt(15))
+
+# Takes longer to verify (or crack)
+system.time(checkpw(passwd, hash12))
+system.time(checkpw(passwd, hash13))
+system.time(checkpw(passwd, hash14))
+system.time(checkpw(passwd, hash15))
+}
 
