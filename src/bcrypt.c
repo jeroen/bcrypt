@@ -57,6 +57,11 @@
 #define bzero(s,n) memset(s, '\0', n)
 #endif
 
+/* defines _BIG_ENDIAN used below */
+#if (defined(__sun) && defined(__SVR4))
+#include <strings.h>
+#endif
+
 /* This implementation is adaptable to current computing power.
  * You can have up to 2^31 rounds which should be enough for some
  * time to come.
