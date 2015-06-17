@@ -43,6 +43,7 @@
 #elif __OpenBSD__
 #include <sys/endian.h>
 #elif (defined(__sun) && defined(__SVR4))
+#define u_int32_t uint32_t
 #include <sys/byteorder.h>
 #endif
 #if defined(BYTE_ORDER)

@@ -57,7 +57,7 @@
 #define bzero(s,n) memset(s, '\0', n)
 #endif
 
-/* defines _BIG_ENDIAN used below */
+/* defines bzero() on solaris */
 #if (defined(__sun) && defined(__SVR4))
 #include <strings.h>
 #endif
