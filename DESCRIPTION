@@ -1,7 +1,7 @@
 Package: bcrypt
 Type: Package
 Title: 'Blowfish' Password Hashing Algorithm
-Version: 0.1.9000
+Version: 0.2
 Authors@R: c(
     person("Jeroen", "Ooms", , "jeroen.ooms@stat.ucla.edu", role = c("cre", "aut")),
     person("Damien", "Miller", role = "cph"),
