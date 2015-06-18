@@ -12,7 +12,7 @@ Description: An R interface to the OpenBSD 'blowfish' password hashing algorithm
     implementation is derived from the 'py-bcrypt' module for Python which is a
     wrapper for the OpenBSD implementation.
 URL: https://github.com/jeroenooms/bcrypt
-    https://www.usenix.org/legacy/events/usenix99/full_papers/provos/provos.pdf
+    http://www.openbsd.org/papers/bcrypt-paper.pdf
 BugReports: https://github.com/jeroenooms/bcrypt/issues
 License: BSD_2_clause + file LICENSE
 Imports: openssl
