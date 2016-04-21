@@ -14,6 +14,10 @@
   implementation is derived from the 'py-bcrypt' module for Python which is a
   wrapper for the OpenBSD implementation.
 
+## See Also
+
+This package is mostly to work with existing `bcrypt` hashes. For new applications consider using scrypt as implemented in `sodium::password_store` or the `script` package.
+
 ## Hello World
 
 ```r
