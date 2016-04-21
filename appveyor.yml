@@ -13,6 +13,9 @@ install:
 
 # Adapt as necessary starting from here
 
+before_install:
+  - REG ADD HKLM\Software\Microsoft\Windows\Windows Error Reporting\DontShowUI /f /t REG_SZ /d 1
+
 build_script:
   - travis-tool.sh install_deps
 
