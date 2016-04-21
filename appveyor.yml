@@ -13,8 +13,10 @@ install:
 
 # Adapt as necessary starting from here
 
+
+# Suppress error dialog about some dll problem (bcrypt.dll conflict maybe?)
 before_build:
-  - REG ADD HKLM\Software\Microsoft\Windows\Windows Error Reporting\DontShowUI /f /t REG_DWORD /d 1
+  - REG ADD "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v DontShowUI /f /t REG_DWORD /d 1
 
 build_script:
   - travis-tool.sh install_deps
