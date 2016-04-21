@@ -1,0 +1,9 @@
+PKG_CPPFLAGS= -Ibcrypt
+PKG_LIBS= -L. -lbcrypt
+LIBBCRYPT= bcrypt/bcrypt.o bcrypt/blowfish.o
+
+$(SHLIB): libbcrypt.a
+
+libbcrypt.a: $(LIBBCRYPT)
+	$(AR) rcs libbcrypt.a $(LIBBCRYPT)
+
