@@ -2,12 +2,12 @@
 
 ##### *Blowfish Password Hashing Algorithm*
 
-[![Build Status](https://travis-ci.org/jeroenooms/bcrypt.svg?branch=master)](https://travis-ci.org/jeroenooms/bcrypt)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/jeroenooms/bcrypt?branch=master&svg=true)](https://ci.appveyor.com/project/jeroenooms/bcrypt)
-[![Coverage Status](https://codecov.io/github/jeroenooms/bcrypt/coverage.svg?branch=master)](https://codecov.io/github/jeroenooms/bcrypt?branch=master)
+[![Build Status](https://travis-ci.org/jeroen/bcrypt.svg?branch=master)](https://travis-ci.org/jeroen/bcrypt)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/jeroen/bcrypt?branch=master&svg=true)](https://ci.appveyor.com/project/jeroen/bcrypt)
+[![Coverage Status](https://codecov.io/github/jeroen/bcrypt/coverage.svg?branch=master)](https://codecov.io/github/jeroen/bcrypt?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/bcrypt)](http://cran.r-project.org/package=bcrypt)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/bcrypt)](http://cran.r-project.org/web/packages/bcrypt/index.html)
-[![Github Stars](https://img.shields.io/github/stars/jeroenooms/bcrypt.svg?style=social&label=Github)](https://github.com/jeroenooms/bcrypt)
+[![Github Stars](https://img.shields.io/github/stars/jeroen/bcrypt.svg?style=social&label=Github)](https://github.com/jeroen/bcrypt)
 
 > An R interface to the OpenBSD 'blowfish' password hashing algorithm,
   as described in "A Future-Adaptable Password Scheme" by Niels Provos. The
