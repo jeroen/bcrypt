@@ -2,3 +2,8 @@
 ^\.Rproj\.user$
 ^appveyor\.yml$
 ^\.travis\.yml$
+^README.md$
+^src/.*\.o$
+^src/.*\.a$
+^src/.*\.out$
+^src/a.out.dSYM$
