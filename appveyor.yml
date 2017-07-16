@@ -6,17 +6,11 @@ init:
         $ErrorActionPreference = "Stop"
         Invoke-WebRequest http://raw.github.com/krlmlr/r-appveyor/master/scripts/appveyor-tool.ps1 -OutFile "..\appveyor-tool.ps1"
         Import-Module '..\appveyor-tool.ps1'
-        iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 install:
   ps: Bootstrap
 
 # Adapt as necessary starting from here
-
-
-# Suppress error dialog about some dll problem (bcrypt.dll conflict maybe?)
-before_build:
-  - REG ADD "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v DontShowUI /f /t REG_DWORD /d 1
 
 build_script:
   - travis-tool.sh install_deps
