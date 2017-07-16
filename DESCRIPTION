@@ -7,10 +7,8 @@ Authors@R: c(
     person("Damien", "Miller", role = "cph"),
     person("Niels", "Provos", role = "cph")
     )
-Description: An R interface to the OpenBSD 'blowfish' password hashing algorithm,
-    as described in "A Future-Adaptable Password Scheme" by Niels Provos. The
-    implementation is derived from the 'py-bcrypt' module for Python which is a
-    wrapper for the OpenBSD implementation.
+Description: Bindings to the 'blowfish' password hashing algorithm derived from
+    the 'OpenBSD' implementation.
 URL: https://github.com/jeroen/bcrypt
     https://www.openbsd.org/papers/bcrypt-paper.pdf
 BugReports: https://github.com/jeroen/bcrypt/issues

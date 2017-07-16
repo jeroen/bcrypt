@@ -51,5 +51,5 @@ system.time(checkpw(passwd, hash13))
 The `libbcrypt` source code is currently bundled with the package:
 
 ```r
-install.package("bcrypt")
+install.packages("bcrypt")
 ```
