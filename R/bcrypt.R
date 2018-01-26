@@ -8,7 +8,7 @@
 #' interface is fully compatible with the Python one.
 #'
 #' The \code{hashpw} function calculates a hash from a password using
-#' a random salt. Validating the hash is done by reshashing the password
+#' a random salt. Validating the hash is done by rehashing the password
 #' using the hash as a salt. The \code{checkpw} function is a simple
 #' wrapper that does exactly this.
 #'
