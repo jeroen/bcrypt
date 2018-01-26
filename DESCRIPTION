@@ -1,7 +1,7 @@
 Package: bcrypt
 Type: Package
 Title: 'Blowfish' Password Hashing Algorithm
-Version: 1.0
+Version: 1.1
 Authors@R: c(
     person("Jeroen", "Ooms", , "jeroen@berkeley.edu", role = c("cre", "aut")),
     person("Damien", "Miller", role = "cph"),
@@ -18,3 +18,4 @@ RoxygenNote: 6.0.1.9000
 Suggests:
     spelling
 Language: en-US
+Encoding: UTF-8

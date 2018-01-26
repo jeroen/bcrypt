@@ -141,7 +141,7 @@ encode_salt(char *salt, u_int8_t *csalt, u_int16_t clen, u_int8_t logr)
 	salt[2] = 'a';
 	salt[3] = '$';
 
-	snprintf(salt + 4, 4, "%2.2u$", logr);
+	snprintf(salt + 4, 5, "%2.2u$", logr);
 
 	encode_base64((u_int8_t *) salt + 7, csalt, clen);
 }
@@ -251,7 +251,7 @@ pybc_bcrypt(const char *key, const char *salt, char *result, size_t result_len)
 		encrypted[i++] = minor;
 	encrypted[i++] = '$';
 
-	snprintf(encrypted + i, 4, "%2.2u$", logr);
+	snprintf(encrypted + i, 5, "%2.2u$", logr);
 
 	encode_base64((u_int8_t *) encrypted + i + 3, csalt, BCRYPT_MAXSALT);
 	encode_base64((u_int8_t *) encrypted + strlen(encrypted), ciphertext,

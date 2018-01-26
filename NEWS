@@ -1,0 +1,2 @@
+1.1
+  - Fix for -Wformat-truncation warning in GCC 7
