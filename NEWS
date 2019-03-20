@@ -1,2 +1,5 @@
+1.2
+  - Add iv option to gen_salt() needed for openssh key format
+
 1.1
   - Fix for -Wformat-truncation warning in GCC 7

@@ -7,7 +7,7 @@
 \alias{checkpw}
 \title{Bcrypt password hashing}
 \usage{
-gensalt(log_rounds = 12)
+gensalt(log_rounds = 12, iv = openssl::rand_bytes(16))
 
 hashpw(password, salt = gensalt())
 
@@ -16,6 +16,8 @@ checkpw(password, hash)
 \arguments{
 \item{log_rounds}{integer between 4 and 31 that defines the complexity of
 the hashing, increasing the cost as \code{2^log_rounds}.}
+
+\item{iv}{init vector to randomize the salt}
 
 \item{password}{the message (password) to encrypt}
 

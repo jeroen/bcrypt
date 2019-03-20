@@ -1,9 +1,9 @@
-PKG_CPPFLAGS= -Ibcrypt
-PKG_LIBS= -L. -lbcrypt
+PKG_CPPFLAGS = -Ibcrypt
+PKG_LIBS = -Lbcrypt -lstatbcrypt
 LIBBCRYPT= bcrypt/bcrypt.o bcrypt/blowfish.o
+STATLIB = bcrypt/libstatbcrypt.a
 
-$(SHLIB): libbcrypt.a
+$(SHLIB): $(STATLIB)
 
-libbcrypt.a: $(LIBBCRYPT)
-	$(AR) rcs libbcrypt.a $(LIBBCRYPT)
-
+$(STATLIB): $(LIBBCRYPT)
+	$(AR) rcs $(STATLIB) $(LIBBCRYPT)

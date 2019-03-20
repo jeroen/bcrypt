@@ -21,6 +21,7 @@
 #' @export
 #' @param log_rounds integer between 4 and 31 that defines the complexity of
 #' the hashing, increasing the cost as \code{2^log_rounds}.
+#' @param iv init vector to randomize the salt
 #' @rdname bcrypt
 #' @name bcrypt
 #' @examples # Secret message as a string
@@ -45,10 +46,9 @@
 #' system.time(checkpw(passwd, hash11))
 #' system.time(checkpw(passwd, hash12))
 #' system.time(checkpw(passwd, hash13))
-gensalt <- function(log_rounds = 12){
+gensalt <- function(log_rounds = 12, iv = openssl::rand_bytes(16)){
   stopifnot(is.numeric(log_rounds))
-  csalt <- openssl::rand_bytes(16)
-  encode_salt(csalt, as.integer(log_rounds))
+  encode_salt(iv, as.integer(log_rounds))
 }
 
 #' @useDynLib bcrypt R_encode_salt
