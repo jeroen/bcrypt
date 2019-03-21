@@ -1,14 +1,14 @@
 Package: bcrypt
 Type: Package
-Title: 'Blowfish' Password Hashing Algorithm
+Title: Blowfish Key Derivation and Password Hashing
 Version: 1.2
 Authors@R: c(
-    person("Jeroen", "Ooms", , "jeroen@berkeley.edu", role = c("cre", "aut")),
-    person("Damien", "Miller", role = "cph"),
-    person("Niels", "Provos", role = "cph")
-    )
+    person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroen@berkeley.edu",
+      comment = c(ORCID = "0000-0002-4035-0289")),
+    person("Damien", "Miller", role = "cph", comment = 'blowfish algorithm'),
+    person("Niels", "Provos", role = "cph", comment = 'py_bcrypt code'))
 Description: Bindings to the 'blowfish' password hashing algorithm derived from
-    the 'OpenBSD' implementation.
+    the OpenBSD implementation.
 URL: https://github.com/jeroen/bcrypt
     https://www.openbsd.org/papers/bcrypt-paper.pdf
 BugReports: https://github.com/jeroen/bcrypt/issues
