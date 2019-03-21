@@ -1,9 +1,15 @@
 PKG_CPPFLAGS = -Ibcrypt
+PKG_CFLAGS = $(C_VISIBILITY)
 PKG_LIBS = -Lbcrypt -lstatbcrypt
-LIBBCRYPT= bcrypt/bcrypt.o bcrypt/blowfish.o
+LIBBCRYPT = bcrypt/bcrypt.o bcrypt/blowfish.o
 STATLIB = bcrypt/libstatbcrypt.a
+
+all: clean
 
 $(SHLIB): $(STATLIB)
 
 $(STATLIB): $(LIBBCRYPT)
 	$(AR) rcs $(STATLIB) $(LIBBCRYPT)
+
+clean:
+	rm -f $(SHLIB) $(OBJECTS) $(STATLIB) $(LIBBCRYPT)
