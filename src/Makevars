@@ -1,4 +1,4 @@
-PKG_CPPFLAGS = -Ibcrypt
+PKG_CPPFLAGS = -Ibcrypt -DSTRICT_R_HEADERS -DR_NO_REMAP
 PKG_CFLAGS = $(C_VISIBILITY)
 PKG_LIBS = -Lbcrypt -lstatbcrypt
 LIBBCRYPT = bcrypt/bcrypt.o bcrypt/blowfish.o
