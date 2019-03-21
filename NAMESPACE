@@ -3,6 +3,8 @@
 export(checkpw)
 export(gensalt)
 export(hashpw)
+export(pbkdf)
 importFrom(openssl,rand_bytes)
+useDynLib(bcrypt,R_bcrypt_pbkdf)
 useDynLib(bcrypt,R_encode_salt)
 useDynLib(bcrypt,R_hashpw)

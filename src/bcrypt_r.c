@@ -6,6 +6,10 @@
 int pybc_bcrypt(const char *, const char *, char *, size_t);
 void encode_salt(char *, u_int8_t *, u_int16_t, u_int8_t);
 
+int bcrypt_pbkdf(const u_int8_t *pass, size_t passlen,
+                 const u_int8_t *salt, size_t saltlen,
+                 u_int8_t *key, size_t keylen, unsigned int rounds);
+
 /* Wrapper for R */
 SEXP R_encode_salt(SEXP csalt_, SEXP log_rounds_){
   if(TYPEOF(csalt_) != RAWSXP)
@@ -50,4 +54,12 @@ SEXP R_hashpw(SEXP password_, SEXP salt_){
     Rf_error("Invalid salt");
 
   return Rf_mkString(hashed);
+}
+
+SEXP R_bcrypt_pbkdf(SEXP pass, SEXP salt, SEXP rounds){
+  SEXP key = PROTECT(Rf_allocVector(RAWSXP, 64));
+  bcrypt_pbkdf(RAW(pass), Rf_length(pass), RAW(salt), Rf_length(salt),
+               RAW(key), Rf_length(key), Rf_asInteger(rounds));
+  UNPROTECT(1);
+  return key;
 }
