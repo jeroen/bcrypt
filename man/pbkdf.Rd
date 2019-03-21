@@ -4,7 +4,7 @@
 \alias{pbkdf}
 \title{Bcrypt PWKDF}
 \usage{
-pbkdf(password, salt, rounds = 16)
+pbkdf(password, salt, rounds = 16L, size = 32L)
 }
 \arguments{
 \item{password}{string or raw vector with password}
@@ -12,6 +12,8 @@ pbkdf(password, salt, rounds = 16)
 \item{salt}{raw vector with (usually 16) bytes}
 
 \item{rounds}{number of hashing rounds}
+
+\item{size}{desired length of the output key}
 }
 \description{
 Password based key derivation function with bcrypt.
