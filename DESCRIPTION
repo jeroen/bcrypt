@@ -3,7 +3,7 @@ Type: Package
 Title: Blowfish Key Derivation and Password Hashing
 Version: 1.2
 Authors@R: c(
-    person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroen@berkeley.edu",
+    person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroenooms@gmail.com",
       comment = c(ORCID = "0000-0002-4035-0289")),
     person("Damien", "Miller", role = "cph", comment = 'blowfish algorithm'),
     person("Niels", "Provos", role = "cph", comment = 'py_bcrypt code'))
