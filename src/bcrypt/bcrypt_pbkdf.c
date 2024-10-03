@@ -74,7 +74,7 @@ bcrypt_hash(u_int8_t *sha2pass, u_int8_t *sha2salt, u_int8_t *out)
 		cdata[i] = pybc_Blowfish_stream2word(ciphertext, sizeof(ciphertext),
 		    &j);
 	for (i = 0; i < 64; i++)
-		pybc_blf_enc(&state, cdata, sizeof(cdata) / sizeof(u_int64_t));
+		pybc_blf_enc(&state, cdata, sizeof(cdata) / sizeof(u_int32_t));
 
 	/* copy out */
 	for (i = 0; i < BCRYPT_BLOCKS; i++) {
