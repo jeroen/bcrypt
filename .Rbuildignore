@@ -7,3 +7,4 @@
 ^src/.*\.a$
 ^src/.*\.out$
 ^src/a.out.dSYM$
+^\.github$
