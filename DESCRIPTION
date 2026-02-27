@@ -13,7 +13,7 @@ Description: Bindings to the 'blowfish' password hashing algorithm
 URL: https://jeroen.r-universe.dev/bcrypt
 BugReports: https://github.com/jeroen/bcrypt/issues
 License: BSD_2_clause + file LICENSE
-Imports: openssl
+Imports: openssl (>= 2.3.5)
 RoxygenNote: 6.1.1
 Suggests:
     spelling
